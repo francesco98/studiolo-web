@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "6c8579ab92ee4549b50d36d797f7dd12",
+    "packages": [
+        {
+            "name": "morris/lessql",
+            "version": "v0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/morris/lessql.git",
+                "reference": "f4150517f6492a761ed1ccb8dd180769e1f89e54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/morris/lessql/zipball/f4150517f6492a761ed1ccb8dd180769e1f89e54",
+                "reference": "f4150517f6492a761ed1ccb8dd180769e1f89e54",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.4"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "friendsofphp/php-cs-fixer": "v2.2.20",
+                "phpunit/phpunit": "~4.6|~5|~6|~7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Morris Brodersen",
+                    "homepage": "https://morrisbrodersen.de"
+                }
+            ],
+            "description": "LessQL: The agile PHP ORM alternative",
+            "homepage": "https://github.com/morris/lessql",
+            "keywords": [
+                "database",
+                "notorm",
+                "orm",
+                "pdo",
+                "sql"
+            ],
+            "time": "2019-05-03T23:46:26+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

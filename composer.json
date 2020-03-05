@@ -1,0 +1,20 @@
+{
+    "name": "vendor/studiolo-web",
+    "description": "Description of project Studiolo",
+    "authors": [
+        {
+            "name": "Francesco Posa",
+            "email": "posa.francesco98@gmail.com"
+        }
+    ],
+    "require": {
+        "morris/lessql": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "View\\": "View/",
+            "Model\\": "Model/",
+            "Controller\\": "Controller/"
+        }
+    }
+}
