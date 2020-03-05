@@ -52,6 +52,9 @@ class Render
         $utilityObject->getStyle = function($n) {
             return  "resources/css/" . $n . ".css"; 
         };
+        $utilityObject->getScript = function($n) {
+            return  "resources/js/" . $n . ".js"; 
+        };
 
         return $utilityObject;
     }

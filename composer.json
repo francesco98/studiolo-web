@@ -8,7 +8,9 @@
         }
     ],
     "require": {
-        "morris/lessql": "*"
+        "morris/lessql": "*",
+        "twbs/bootstrap": "^4.4",
+        "components/jquery": "^3.4"
     },
     "autoload": {
         "psr-4": {
@@ -16,5 +18,15 @@
             "Model\\": "Model/",
             "Controller\\": "Controller/"
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "rm -f resources/css/bootstrap.min.css",
+            "rm -f resources/js/bootstrap.min.js",
+            "rm -f resources/js/jquery.min.js",
+            "cp vendor/twbs/bootstrap/dist/css/bootstrap.min.css resources/css/bootstrap.min.css",
+            "cp vendor/twbs/bootstrap/dist/js/bootstrap.min.js resources/js/bootstrap.min.js",
+            "cp vendor/components/jquery/jquery.min.js resources/js/jquery.min.js"
+        ]
     }
 }
