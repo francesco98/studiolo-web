@@ -2,16 +2,21 @@
 
 namespace Model\Router;
 
-use Model\Router\IRequest;
+/*
+  Questa classe si preoccupa di analizzare la variabile
+  superglobal $_SERVER, realizzando per ogni key un attributo
+  con corrispettivo valore
+*/
 
-class Request implements IRequest
+class Request
 {
   function __construct()
   {
-    $this->bootstrapSelf();
+    $this->build();
   }
 
-  private function bootstrapSelf()
+  //Costruisce l'istanza con i relativi attributi
+  private function build()
   {
     foreach($_SERVER as $key => $value)
     {
@@ -19,6 +24,7 @@ class Request implements IRequest
     }
   }
 
+  //Trasforma da snake case a cammel case
   private function toCamelCase($string)
   {
     $result = strtolower($string);
@@ -34,24 +40,5 @@ class Request implements IRequest
     return $result;
   }
 
-  public function getBody()
-  {
-    if($this->requestMethod === "GET")
-    {
-      return;
-    }
-
-
-    if ($this->requestMethod == "POST")
-    {
-
-      $body = array();
-      foreach($_POST as $key => $value)
-      {
-        $body[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
-      }
-
-      return $body;
-    }
-  }
+  //TODO: estrarre parametri da richiesta HTTP POST o GET
 }

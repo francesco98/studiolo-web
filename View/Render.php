@@ -4,10 +4,20 @@ namespace View;
 
 use stdClass;
 
+/*
+    Classe che si occupa di effettuare il rendering di una view
+*/
+
 class Render
 {
+    /* 
+        Il nome del metodo statico deve corrispondere al nome della view in View/template
+        Il primo parametro corrisponde al title della pagine
+        Il secondo parametro deve essere un model oppure un array
+    */    
     public static function __callStatic($name, $args)
     {
+        //Sono due oggetti accessibili nella view
         $object = new stdClass();
         $utilityObject = self::createUtilityClass($args[0]);
 
@@ -35,6 +45,7 @@ class Render
         }
     }
 
+    //Converto un array in una classe
     private static function createClass($array)
     {
         $class = new stdClass();
@@ -46,6 +57,7 @@ class Render
         return $class;
     }
 
+    //Creo la classe con attributi e metodi di utilità per le view
     private static function createUtilityClass($pageTitle) {
         $utilityObject = new stdClass();
         $utilityObject->title = $pageTitle;

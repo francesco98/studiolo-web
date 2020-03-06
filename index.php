@@ -12,19 +12,11 @@ use Controller\HomeController;
 use Model\Router\Request;
 use Model\Router\Router;
 
+//Realizzo l'istanza del Router
 $router = new Router(new Request());
 
-$router->get('/', function() {
+//Realizzo le regole di routing
+$router->get('/', function($request) {
   $homeController = new HomeController();
   return $homeController->index();
-});
-
-$router->get('/profile', function($request) {
-  return <<<HTML
-  <h1>Profile</h1>
-HTML;
-});
-
-$router->post('/data', function($request) {
-  return json_encode($request->getBody());
 });

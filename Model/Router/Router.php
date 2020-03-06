@@ -2,14 +2,18 @@
 
 namespace Model\Router;
 
-use Model\Router\IRequest;
+/*
+  Questa classe si preoccupa di realizzare il routing
+  per richieste HTTP GET o POST. 
+  Utilizza un oggetto Request
+*/
 
 class Router
 {
   private $request;
   private $supportedHttpMethods = ["GET", "POST"];
 
-  function __construct(IRequest $request)
+  function __construct(Request $request)
   {
    $this->request = $request;
   }

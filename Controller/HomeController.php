@@ -2,12 +2,22 @@
 
 namespace Controller;
 
+use Model\DB\Contact;
 use View\Render;
 
 class HomeController {
 
     public function index() {
-        return Render::index("Home", ['text' => "Hello World!"]);
+        /*
+            Esempio di utilizzo
+            
+            $contact = Contact::find(['id' => 1]);
+            $contact->setName("ProvaName");
+            $contact = $contact->save();
+            
+            print_r($contact);
+        */
+        
+        return Render::index("Home", []);
     }
-
 }
