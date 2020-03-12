@@ -9,6 +9,7 @@ define("__DOCUMENT_ROOT__", filter_input(INPUT_SERVER, 'DOCUMENT_ROOT'));
 require __DOCUMENT_ROOT__ . '/vendor/autoload.php';
 
 use Controller\HomeController;
+use Controller\ContactsController;
 use Model\Router\Request;
 use Model\Router\Router;
 
@@ -19,4 +20,14 @@ $router = new Router(new Request());
 $router->get('/', function($request) {
   $homeController = new HomeController();
   return $homeController->index();
+});
+
+$router->get('/contacts', function($request) {
+  $homeController = new HomeController();
+  return $homeController->contacts();
+});
+
+$router->post('/processform', function($request) {
+  $contactsController = new ContactsController();
+  return $contactsController->processForm($request);
 });

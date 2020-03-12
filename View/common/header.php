@@ -33,7 +33,7 @@
                         <a class="nav-link js-scroll-trigger" href="/">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/">Contattaci</a>
+                        <a class="nav-link js-scroll-trigger" href="/contacts">Contattaci</a>
                     </li>
                 </ul>
             </div>
