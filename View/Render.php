@@ -61,6 +61,7 @@ class Render
     private static function createUtilityClass($pageTitle) {
         $utilityObject = new stdClass();
         $utilityObject->title = $pageTitle;
+        $utilityObject->fixedBar = false;
         $utilityObject->getStyle = function($n) {
             return  "resources/css/" . $n . ".css"; 
         };

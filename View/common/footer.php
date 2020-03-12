@@ -18,5 +18,15 @@
 <script src="<?=($utilityObject->getScript)('jquery.min')?>"></script>
 <script src="<?=($utilityObject->getScript)('bootstrap.min')?>"></script>
 <script src="<?=($utilityObject->getScript)('script')?>"></script>
+
+<?php
+    if($utilityObject->fixedBar) {
+?>
+<script type="text/javascript">
+    $("#mainNav").addClass("no-scroll navbar-shrink");
+</script>
+<?php
+    }
+?>
 </body>
 </html>
