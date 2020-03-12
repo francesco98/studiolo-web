@@ -145,12 +145,11 @@ section h2 {
   }
 }
 
-header.masthead {
+.masthead {
   position: relative;
   width: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
-  color: white;
   background: url("../img/bg-pattern.png"), #009788;
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #009788, #3e50b2);
 }
@@ -439,4 +438,19 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .btn-custom{
   margin-top: 18px;
   padding: 12px;
+}
+
+.gradient-post{
+  background: url(../img/bg-pattern.png), linear-gradient(to left, #009788, #3e50b2);
+}
+
+.text-yellow{
+  color: #fdcc52;
+}
+
+.section-blog{
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }

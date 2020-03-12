@@ -29,6 +29,7 @@ $router->get('/blog', function($request) {
   return $blogController->index();
 });
 
+
 $router->get('/contacts', function($request) {
   $homeController = new HomeController();
   return $homeController->contacts();

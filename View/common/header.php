@@ -30,7 +30,7 @@
                         <a class="nav-link js-scroll-trigger" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/">Blog</a>
+                        <a class="nav-link js-scroll-trigger" href="/blog">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/contacts">Contattaci</a>

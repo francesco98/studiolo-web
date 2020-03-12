@@ -3,7 +3,7 @@
         <div class="row h-100">
             <div class="col-lg-7 my-auto">
                 <div class="header-content mx-auto">
-                    <h1 class="mb-5">Studiolo è l'applicazione che rivoluzionerà la gestione delle aule studio della tua Università</h1>
+                    <h1 class="mb-5 text-white">Studiolo è l'applicazione che rivoluzionerà la gestione delle aule studio della tua Università</h1>
                     <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Inizia ora!</a>
                 </div>
             </div>
