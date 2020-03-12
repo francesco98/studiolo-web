@@ -34,6 +34,7 @@
       } else {
         $("#mainNav").removeClass("navbar-shrink");
       }
+    }
   };
   // Collapse now if page is not at top
   navbarCollapse();
