@@ -27,6 +27,7 @@ $router->get('/', function($request) {
 $router->get('/blog', function($request) {
   $blogController = new BlogController();
   return $blogController->index();
+});
 
 $router->get('/contacts', function($request) {
   $homeController = new HomeController();
