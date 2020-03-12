@@ -9,6 +9,7 @@ define("__DOCUMENT_ROOT__", filter_input(INPUT_SERVER, 'DOCUMENT_ROOT'));
 require __DOCUMENT_ROOT__ . '/vendor/autoload.php';
 
 use Controller\HomeController;
+use Controller\BlogController;
 use Model\Router\Request;
 use Model\Router\Router;
 
@@ -19,4 +20,9 @@ $router = new Router(new Request());
 $router->get('/', function($request) {
   $homeController = new HomeController();
   return $homeController->index();
+});
+
+$router->get('/blog', function($request) {
+  $blogController = new BlogController();
+  return $blogController->index();
 });
