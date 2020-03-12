@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+                        <a class="nav-link js-scroll-trigger" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#features">Blog</a>
+                        <a class="nav-link js-scroll-trigger" href="/">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contattaci</a>
+                        <a class="nav-link js-scroll-trigger" href="/contacts">Contattaci</a>
                     </li>
                 </ul>
             </div>

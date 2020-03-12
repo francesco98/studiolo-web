@@ -7,11 +7,14 @@ namespace Model\Router;
   superglobal $_SERVER, realizzando per ogni key un attributo
   con corrispettivo valore
 */
-
+use stdClass;
 class Request
 {
+  private $params;
+
   function __construct()
   {
+    $this->params = new stdClass();
     $this->build();
   }
 
@@ -22,6 +25,15 @@ class Request
     {
       $this->{$this->toCamelCase($key)} = $value;
     }
+    foreach($_POST as $key => $value)
+    {
+      $this->params->{$key} = $value;
+
+    }
+  }
+
+  public function getParams(){
+    return $this->params;
   }
 
   //Trasforma da snake case a cammel case
@@ -39,6 +51,10 @@ class Request
 
     return $result;
   }
+
+  
+
+
 
   //TODO: estrarre parametri da richiesta HTTP POST o GET
 }

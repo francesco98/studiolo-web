@@ -10,6 +10,8 @@ require __DOCUMENT_ROOT__ . '/vendor/autoload.php';
 
 use Controller\HomeController;
 use Controller\BlogController;
+use Controller\ContactsController;
+
 use Model\Router\Request;
 use Model\Router\Router;
 
@@ -25,4 +27,13 @@ $router->get('/', function($request) {
 $router->get('/blog', function($request) {
   $blogController = new BlogController();
   return $blogController->index();
+
+$router->get('/contacts', function($request) {
+  $homeController = new HomeController();
+  return $homeController->contacts();
+});
+
+$router->post('/processform', function($request) {
+  $contactsController = new ContactsController();
+  return $contactsController->processForm($request);
 });
