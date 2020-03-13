@@ -45,4 +45,3 @@ $router->post('/processform', function($request) {
   $contactsController = new ContactsController();
   return $contactsController->processForm($request);
 });
-
