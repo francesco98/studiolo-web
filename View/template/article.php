@@ -5,9 +5,7 @@ $utilityObject->fixedBar=true;
     <div class="container">
         <div class="card p-5 shadow-sm rounded">
             <h1 class="display-4 font-italic">
-                <b>
-                    Ciao Veronica
-                </b>
+                <?=$object->getTitle()?>
             </h1>
             <p class="text-monospace text-yellow">10 Ottobre 2019</p>
             <p class="card-text my-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium

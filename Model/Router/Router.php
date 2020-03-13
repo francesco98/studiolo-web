@@ -72,7 +72,7 @@ class Router
   function resolve()
   {
     $methodDictionary = $this->{strtolower($this->request->requestMethod)};
-    $formatedRoute = $this->formatRoute($this->request->requestUri);
+    $formatedRoute = $this->formatRoute(parse_url($this->request->requestUri, PHP_URL_PATH));
     $method = $methodDictionary[$formatedRoute];
 
     if(is_null($method))

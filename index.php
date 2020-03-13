@@ -24,18 +24,25 @@ $router->get('/', function($request) {
   return $homeController->index();
 });
 
+//Controller per la pagina blog
 $router->get('/blog', function($request) {
   $blogController = new BlogController();
   return $blogController->index();
 });
 
+$router->get('/article', function($request) {
+  $blogController = new BlogController();
+  return $blogController->article($request);
+});
 
+//Controller per la pagina contattaci
 $router->get('/contacts', function($request) {
-  $homeController = new HomeController();
-  return $homeController->contacts();
+  $contactsController = new ContactsController();
+  return $contactsController->index();
 });
 
 $router->post('/processform', function($request) {
   $contactsController = new ContactsController();
   return $contactsController->processForm($request);
 });
+

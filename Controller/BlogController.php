@@ -2,21 +2,25 @@
 
 namespace Controller;
 
-use Model\DB\Contact;
+use Model\DB\Article;
 use View\Render;
 
 class BlogController {
 
     public function index() {
+        $articles = Article::findAll();
 
-            // Esempio di utilizzo
-            $contact = Contact::find(['id' => 1]);
-            //$contact->setName("ProvaName");
-            //$contact->setEmail("ProvaName");
-            //$contact->setMessage("ProvaName");
-            //$contact = $contact->save();
-            print_r($contact);
+        return Render::blog("Blog", ["articles" => $articles]);
+    }
 
-        return Render::blog("Blog", []);
+    public function article($request) {
+        $params = $request->getParams();
+        
+        $idArticle = $params->id;
+
+        $articolo = Article::find(['id' => $idArticle]);
+
+        return Render::article("Blog", $articolo);
+    
     }
 }

@@ -10,11 +10,13 @@ namespace Model\Router;
 use stdClass;
 class Request
 {
-  private $params;
+  private $postParams;
+  private $getParams;
 
   function __construct()
   {
-    $this->params = new stdClass();
+    $this->postParams = new stdClass();
+    $this->getParams = new stdClass();
     $this->build();
   }
 
@@ -25,15 +27,25 @@ class Request
     {
       $this->{$this->toCamelCase($key)} = $value;
     }
+
+    //Ottengo tutti i parametri POST
     foreach($_POST as $key => $value)
     {
-      $this->params->{$key} = $value;
+      $this->postParams->{$key} = $value;
+    }
 
+    //Ottengo tutti i parametri GET
+    foreach($_GET as $key => $value) {
+      $this->getParams->{$key} = $value;
     }
   }
 
+  public function getPostParams(){
+    return $this->postParams;
+  }
+
   public function getParams(){
-    return $this->params;
+    return $this->getParams;
   }
 
   //Trasforma da snake case a cammel case
