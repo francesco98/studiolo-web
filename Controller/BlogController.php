@@ -20,7 +20,7 @@ class BlogController {
 
         $articolo = Article::find(['id' => $idArticle]);
 
-        return Render::article("Blog", $articolo);
+        return Render::article("Articolo", $articolo);
     
     }
 }
