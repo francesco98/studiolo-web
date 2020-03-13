@@ -1,16 +1,20 @@
 <header class="masthead">
     <div class="container h-100">
-        <div class="row h-100">
+        <div class="row h-75">
             <div class="col-lg-7 my-auto">
                 <div class="header-content mx-auto">
                     <h1 class="mb-5 text-white">Studiolo è l'applicazione che rivoluzionerà la gestione delle aule studio della tua Università</h1>
-                    <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Inizia ora!</a>
                 </div>
             </div>
             <div class="col-lg-5 my-auto">
                 <div class="device-container">
                     <img src="resources/img/logo-studiolo.png" class="img-fluid" alt="">
                 </div>
+            </div>
+        </div>
+        <div class="row h-25">
+            <div class="col-lg-12 text-center">
+            <a class="btn btn-outline btn-xl js-scroll-trigger">Inizia ora!</a>
             </div>
         </div>
     </div>
