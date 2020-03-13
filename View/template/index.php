@@ -14,7 +14,7 @@
         </div>
         <div class="row h-25">
             <div class="col-lg-12 text-center">
-            <a class="btn btn-outline btn-xl js-scroll-trigger">Inizia ora!</a>
+            <a class="btn btn-home btn-outline btn-xl js-scroll-trigger">Inizia ora!</a>
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
     <div class="cta-content">
         <div class="container">
             <h2>Che stai aspettando?</h2>
-            <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Unisci ora!</a>
+            <a href="#contact" class="btn btn-home btn-outline btn-xl js-scroll-trigger">Unisci ora!</a>
         </div>
     </div>
     <div class="overlay"></div>

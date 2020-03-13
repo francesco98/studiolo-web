@@ -73,14 +73,15 @@ class Router
   {
     $methodDictionary = $this->{strtolower($this->request->requestMethod)};
     $formatedRoute = $this->formatRoute(parse_url($this->request->requestUri, PHP_URL_PATH));
-    $method = $methodDictionary[$formatedRoute];
-
-    if(is_null($method))
+   
+    if(!isset($methodDictionary[$formatedRoute]))
     {
       $this->defaultRequestHandler();
       return;
     }
-
+    
+    $method = $methodDictionary[$formatedRoute];
+    
     echo call_user_func_array($method, array($this->request));
   }
 

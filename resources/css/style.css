@@ -18,8 +18,6 @@ a:hover, a:focus {
 }
 
 hr {
-  max-width: 100px;
-  margin: 25px auto 0;
   border-width: 1px;
   border-color: rgba(34, 34, 34, 0.1);
 }
@@ -415,7 +413,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   background-color: #fdcc52;
 }
 
-.btn {
+.btn-home {
   border-radius: 300px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
@@ -429,10 +427,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .form-contacts {
   background-color: #ffffff60;
-  
   padding: 40px;
-  border-radius: 6px;
-
+  border-radius: 10px;
 }
 
 .btn-custom{
@@ -453,6 +449,11 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   width: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
+}
+
+.breadcrumb {
+  font-size: 0.8em;
+  background-color: #eeeeee50 !important;
 }
 
 .text-grey{
