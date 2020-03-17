@@ -29,7 +29,7 @@ $utilityObject->fixedBar = true;
                         <h5 class="card-title">Azioni</h5>
                         <p class="card-text">Attenzione: lasciando questa pagina senza salvare con il pulsante in basso,
                             le modifiche andranno perse.</p>
-                        <a id="editOp" href="#" class="btn btn-primary mt-2">Modifica</a>
+                        <a id="editOp" href="#" class="btn btn-primary mt-2"><?= strtoupper($object->op) == "UPDATE" ? "Modifica" : "Inserisci" ?> </a>
                         <a id="deleteOp" href="#" class="btn btn-danger mt-2">Elimina</a>
                     </div>
                 </div>
