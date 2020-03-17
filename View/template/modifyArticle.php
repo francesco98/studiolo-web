@@ -20,7 +20,7 @@ $utilityObject->fixedBar = true;
                         <textarea name="text" class="form-control" rows="40"><?= $object->article->getText() ?></textarea>
                     </div>
                     <input type="hidden" name="id" value=<?= is_null($object->article->getId()) ? 0 : $object->article->getId() ?> />
-                    <input type="hidden" name="op" value=<?= $object->op ?> />
+                    <input id="op" type="hidden" name="op" value="<?= $object->op ?>" />
                 </form>
             </div>
             <div class="col-lg-4">

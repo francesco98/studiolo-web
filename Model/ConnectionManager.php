@@ -121,6 +121,21 @@ class ConnectionManager
         $query->execute($vvalues);
     }
 
+    public function delete($name, $where) {
+        $sql = "DELETE FROM " . $name . " WHERE ";
+
+        $vvalues = [];
+
+        foreach($where as $key => $value) {
+            $sql .= $key . " = ? AND ";
+            array_push($vvalues, $value);
+        }
+        $sql = substr($sql, 0, strlen($sql)-4);
+        
+        $query = $this->myConn->prepare($sql);
+        $query->execute($vvalues);
+    }
+
     //Chiusura della connessione
     public function close() {
         $this->myConn = null;

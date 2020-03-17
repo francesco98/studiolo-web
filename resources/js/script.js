@@ -35,15 +35,23 @@
   });
 
   $("#editOp").click(function() {
-    articleFormPost("edit");
+    articleFormPost("Sicuro di voler modificare l'articolo?", "edit");
   });
 
   $("#deleteOp").click(function() {
-    articleFormPost("delete");
+    articleFormPost("Sicuro di voler eliminare l'articolo?", "delete");
   });
 
-  function articleFormPost(which) {
-    var result = confirm("Sicuro di voler procedere?");
+  $("#op").ready(function() {
+    var op = $("#op").val();
+
+    if (op == "delete") {
+      articleFormPost("Sicuro di voler eliminare l'articolo?", "delete");
+    }
+  });
+
+  function articleFormPost(message, which) {
+    var result = confirm(message);
 
     if (result) {
       var input = $("<input>")

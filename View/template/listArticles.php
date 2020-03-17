@@ -24,7 +24,7 @@ foreach ($object->articles as $article) {
                     <a href="<?= "/modifyArticle?id=" . $article->getId()."&op=update" ?>" class="btn btn-link text-blue">Modifica</a>
                 </div>
                 <div class="col-2 p-0">
-                    <a href="#" class="btn btn-link text-green">Elimina</a>
+                    <a href="<?= "/modifyArticle?id=" . $article->getId()."&op=delete" ?>" class="btn btn-link text-green">Elimina</a>
                 </div>
             </div>
             <?php

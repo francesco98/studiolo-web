@@ -105,4 +105,16 @@ abstract class AbstractModel {
         return self::find($primaryAll);
     }
 
+    public function delete() {
+        $primaryAll = [];
+
+        foreach($this as $key => $value) {
+            if(in_array($key, static::getPrimaryKey())) {
+                $primaryAll[$key] = $value;
+            }
+        }
+
+        self::getConnectionManager()->delete(self::getClassName(), $primaryAll);
+    }
+
 }
