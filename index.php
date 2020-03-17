@@ -56,4 +56,12 @@ $router->get('/admin', function($request) {
 $router->get('/modifyArticle', function($request) {
   $adminController = new AdminController();
   return $adminController->modifyArticle($request);
+$router->post('/processadmin', function($request) {
+  $adminController = new AdminController();
+  return $adminController->processLogin($request);
+});
+
+$router->get('/logout', function($request) {
+  $adminController = new AdminController();
+  return $adminController->logout();
 });

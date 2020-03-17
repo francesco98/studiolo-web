@@ -35,6 +35,33 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/contacts">Contattaci</a>
                     </li>
+                    <?php
+                    if (session_status() == PHP_SESSION_NONE) {
+                        session_start();
+                    }
+                    if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
+                    ?>
+                        <li class="nav-item d-flex">
+                            <a class="nav-link js-scroll-trigger my-auto" href="/admin">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex">
+                            <a class="nav-link js-scroll-trigger my-auto" href="/logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </li>
+                    <?php
+                    } else {
+                    ?>
+                        <li class="nav-item d-flex">
+                            <a class="nav-link js-scroll-trigger my-auto" href="/admin">
+                                <i class="fas fa-lock"></i>
+                            </a>
+                        </li>
+                    <?php
+                    }
+                    ?>
                 </ul>
             </div>
         </div>

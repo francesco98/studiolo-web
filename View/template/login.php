@@ -20,10 +20,10 @@ $utilityObject->fixedBar = true;
         <div class="row justify-content-md-center">
             
                 <div class="col-lg-6 mt-5">
-                    <form class="masthead shadow-lg form-contacts" action="/processlogin" method="post">
+                    <form class="masthead shadow-lg form-contacts" action="/processadmin" method="post">
                         <div class="form-group">
-                            <label for="adminEmail" class="text-white">Email</label>
-                            <input type="email" class="form-control" id="adminEmail" aria-describedby="emailHelp" placeholder="Inserisci Email" name="email">
+                            <label for="user" class="text-white">Username</label>
+                            <input type="text" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Inserisci Username" name="user">
                         </div>
                         <div class="form-group">
                             <label for="password" class="text-white">Password</label>
