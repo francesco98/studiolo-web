@@ -64,6 +64,55 @@
     }
   }
 
+  var checkEmail = false;
+  var checkName = false;
+  var checkMessage = false;
+
+  function check (){
+    if(checkEmail && checkName && checkMessage){
+      $("#send").prop('disabled', false);
+    }
+  }
+
+  $("#inputEmail1").keyup(function(){
+    var input = $("#inputEmail1").val().length;
+    if(input >= 3 && input < 50){
+      $("#error_email").hide();
+      checkEmail = true;
+    }
+    else{
+      $("#error_email").show();
+      checkEmail = false;
+    }
+    check();
+  });
+  
+  $("#inputName").keyup(function(){
+    var input = $("#inputName").val().length;
+    if(input >= 3 && input < 50){
+      $("#error_name").hide();
+      checkName = true;
+    }
+    else{
+      $("#error_name").show();
+      checkName = false;
+    }
+    check();
+  });
+
+  $("#inputMessage").keyup(function(){
+    var text = $("#inputMessage").val().length;
+    if(text >= 3 && text < 150){
+      $("#error_message").hide();
+      checkMessage = true;
+    }
+    else{
+      $("#error_message").show();
+      checkMessage = false;
+    }
+    check();
+  });
+
   // Collapse Navbar
   var navbarCollapse = function() {
     if (!$("#mainNav").hasClass("no-scroll")) {
