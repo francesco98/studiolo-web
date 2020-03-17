@@ -13,11 +13,11 @@ $utilityObject->fixedBar = true;
                                 Titolo
                             </h1>
                         </label>
-                        <input type="text" class="form-control" id="articleTitle" placeholder="Inserisci un titolo">
+                        <input type="text" class="form-control" id="articleTitle" value="<?= $object->getTitle() ?>"
+                            placeholder="Inserisci un titolo">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="articleText" rows="20">
-                        </textarea>
+                        <textarea class="form-control" id="articleText" rows="20"><?= $object->getText() ?></textarea>
                     </div>
                 </form>
             </div>

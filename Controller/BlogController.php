@@ -18,9 +18,9 @@ class BlogController {
         
         $idArticle = $params->id;
 
-        $articolo = Article::find(['id' => $idArticle]);
+        $article = Article::find(['id' => $idArticle]);
 
-        return Render::article("Articolo", $articolo);
+        return Render::article("Articolo", $article);
     
     }
 }

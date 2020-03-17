@@ -11,7 +11,7 @@ require __DOCUMENT_ROOT__ . '/vendor/autoload.php';
 use Controller\HomeController;
 use Controller\BlogController;
 use Controller\ContactsController;
-use Controller\LoginController;
+use Controller\AdminController;
 
 use Model\Router\Request;
 use Model\Router\Router;
@@ -47,12 +47,13 @@ $router->post('/processform', function($request) {
   return $contactsController->processForm($request);
 });
 
-$router->post('/processform', function($request) {
-  $contactsController = new ContactsController();
-  return $contactsController->processForm($request);
+//Controller per admin
+$router->get('/admin', function($request) {
+  $adminController = new AdminController();
+  return $adminController->index();
 });
 
-$router->get('/login', function($request) {
-  $loginController = new LoginController();
-  return $loginController->login();
+$router->get('/modifyArticle', function($request) {
+  $adminController = new AdminController();
+  return $adminController->modifyArticle($request);
 });
