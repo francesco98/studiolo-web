@@ -35,18 +35,21 @@ $utilityObject->fixedBar = true;
                         <div class="form-group">
                             <label for="inputEmail1" class="text-white">Email</label>
                             <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Inserisci Email" name="email">
+                            <label class="text-yellow" id="error_email" style="display:none;">Il campo deve contenere almeno 3 caratteri e al massimo 50</label>
                         </div>
                         <div class="form-group">
                             <label for="inputName" class="text-white">Nome Università</label>
                             <input type="text" class="form-control" id="inputName" placeholder="Inserisci nome Università" name="uni">
+                            <label class="text-yellow" id="error_name" style="display:none;">Il campo deve contenere almeno 3 caratteri e al massimo 50</label>
 
                         </div>
                         <div class="form-group">
                             <label for="inputMessage" class="text-white">Messaggio</label>
                             <textarea class="form-control" id="inputMessage" rows="5" style="resize: none" name="message"></textarea>
+                            <label class="text-yellow" id="error_message" style="display:none;">Il campo deve contenere almeno 3 caratteri e al massimo 50</label>
                         </div>
                         <div class="d-block text-center mx-auto">
-                            <button type="submit" class="btn btn-light btn-custom text-uppercase px-5">Invia</button>
+                            <button type="submit" id="send" class="btn btn-light btn-custom text-uppercase px-5" disabled>Invia</button>
                         </div>
                     </form>
                 </div>
