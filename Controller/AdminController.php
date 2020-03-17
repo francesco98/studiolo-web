@@ -50,7 +50,7 @@ class AdminController
             $op = $params->op;
             $article = new Article();
 
-            if ($op == "update") {
+            if ($op == "update" || $op == "delete") {
                 $idArticle = $params->id;
                 $article = Article::find(['id' => $idArticle]);
             }
