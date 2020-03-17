@@ -52,10 +52,6 @@ $router->get('/admin', function($request) {
   $adminController = new AdminController();
   return $adminController->index();
 });
-
-$router->get('/modifyArticle', function($request) {
-  $adminController = new AdminController();
-  return $adminController->modifyArticle($request);
 $router->post('/processadmin', function($request) {
   $adminController = new AdminController();
   return $adminController->processLogin($request);
@@ -64,4 +60,14 @@ $router->post('/processadmin', function($request) {
 $router->get('/logout', function($request) {
   $adminController = new AdminController();
   return $adminController->logout();
+});
+
+$router->get('/modifyArticle', function($request) {
+  $adminController = new AdminController();
+  return $adminController->modifyArticle($request);
+});
+
+$router->post('/processedit', function($request) {
+  $adminController = new AdminController();
+  return $adminController->processEdit($request);
 });

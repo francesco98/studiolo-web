@@ -270,7 +270,6 @@ section.features .feature-item i {
   display: block;
   margin-bottom: 15px;
   background: linear-gradient(to left, #7b4397, #dc2430);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -466,4 +465,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .text-blue{
   color: #3e50b2;
+}
+
+.minh-100 {
+  min-height: 100%;
 }

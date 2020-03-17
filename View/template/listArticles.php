@@ -1,7 +1,7 @@
 <?php
 $utilityObject->fixedBar=true;
 ?>
-<section class="masthead">
+<section class="masthead minh-100">
     <div class="container">
         <div class="card p-5 shadow-sm rounded">
             <div class="row mb-5 d-block p-4">
@@ -18,7 +18,7 @@ foreach ($object->articles as $article) {
                             <?= $article->getTitle() ?>
                         </strong>
                     </h5>
-                    <p class="text-monospace text-grey"><?= $date->format('d/m/Y'); ?></p>
+                    <p class="text-grey" style="font-size:10px"> Aggiornato il <?= $date->format('d/m/Y'); ?> alle ore <?= $date->format('H:i:s'); ?></p>
                 </div>
                 <div class="col-2 text-right p-0">
                     <a href="<?= "/modifyArticle?id=" . $article->getId()."&op=update" ?>" class="btn btn-link text-blue">Modifica</a>

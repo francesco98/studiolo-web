@@ -5,7 +5,8 @@ namespace Controller;
 use Model\DB\Article;
 use View\Render;
 
-class AdminController {
+class AdminController
+{
     public function index()
     {
         $this->startSession();
@@ -60,18 +61,52 @@ class AdminController {
         return Render::login("Login", []);
     }
 
-    public function modifyArticle($request) {
+    public function modifyArticle($request)
+    {
         $params = $request->getParams();
-        
+
         $op = $params->op;
         $article = new Article();
 
-        if($op == "update"){
+        if ($op == "update") {
             $idArticle = $params->id;
             $article = Article::find(['id' => $idArticle]);
         }
 
-        return Render::modifyArticle("Articolo", $article);
-    
+        return Render::modifyArticle("Articolo", ['op' => $op, 'article' => $article]);
+    }
+
+    public  function processEdit($request)
+    {
+        $params = $request->getPostParams();
+
+        //Modifica o Elimina
+        $which = strtoupper($params->which);
+
+        //Inserisci o aggiorna
+        $op = strtoupper($params->op);
+
+        $id = $params->id;
+        $title = $params->title;
+        $text = $params->text;
+
+        if ($which == "DELETE") {
+            //TODO: DELETE
+        } else if ($which == "EDIT") {
+            
+            if ($op == "INSERT") {
+                $article = new Article();
+            } else if ($op == "UPDATE") {
+                $article = Article::find(['id' => $id]);
+            }
+
+            $article->setTitle($title);
+            $article->setText($text);
+            $article->save();
+        } else {
+            $this->logout();
+        }
+
+        header("Location: /admin");
     }
 }
