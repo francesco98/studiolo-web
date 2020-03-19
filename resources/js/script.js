@@ -62,8 +62,9 @@ $(function($) {
   }
 
   $("#inputEmail1").keyup(function() {
-    var input = $("#inputEmail1").val().length;
-    if (input >= 3 && input < 50) {
+    var input = $("#inputEmail1").val();
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (regex.test(input)) {
       $("#error_email").hide();
       checkEmail = true;
     } else {
@@ -87,7 +88,7 @@ $(function($) {
 
   $("#inputMessage").keyup(function() {
     var text = $("#inputMessage").val().length;
-    if (text >= 3 && text < 150) {
+    if (text >= 3 && text < 500) {
       $("#error_message").hide();
       checkMessage = true;
     } else {

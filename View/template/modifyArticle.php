@@ -4,6 +4,14 @@ $utilityObject->fixedBar = true;
 
 <section class="section-blog minh-100">
     <div class="container ">
+
+    <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Studiolo</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><?= !is_null($object->article->getTitle()) ? $object->article->getTitle() : 'Nuovo articolo' ?></li>
+            </ol>
+        </nav>
+
         <div class="row justify-content-md-start">
             <div class="col-lg-8 ">
                 <form id="articleForm" method="POST" action="/processedit">

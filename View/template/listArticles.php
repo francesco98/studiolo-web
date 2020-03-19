@@ -3,11 +3,29 @@ $utilityObject->fixedBar=true;
 ?>
 <section class="masthead minh-100">
     <div class="container">
+
+    <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-white">
+                <li class="breadcrumb-item"><a href="/">Studiolo</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Amministrazione</li>
+            </ol>
+        </nav>
+
         <div class="card p-5 shadow-sm rounded">
             <div class="row mb-5 d-block p-4">
                 <a href="<?= "/modifyArticle?op=insert" ?>" class="btn btn-warning float-right">Nuovo articolo</a>
             </div>
             <?php
+            if(count($object->articles) == 0){
+?>
+
+ <div class="alert alert-warning" role="alert">
+ Nessun articolo presente!
+</div>
+<?php
+}
+else{
+
 foreach ($object->articles as $article) {
     $date = new DateTime($article->getDate());
 ?>
@@ -28,6 +46,7 @@ foreach ($object->articles as $article) {
                 </div>
             </div>
             <?php
+}
 }
 ?>
         </div>

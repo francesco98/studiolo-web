@@ -455,6 +455,11 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   background-color: #eeeeee50 !important;
 }
 
+.breadcrumb-white {
+  font-size: 0.8em;
+  background-color: #fff !important;
+}
+
 .text-grey{
   color: #596f6e;
 }

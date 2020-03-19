@@ -2,7 +2,7 @@
 $utilityObject->fixedBar = true;
 $firstArticle = array_pop($object->articles);
 ?>
-<section>
+<section class="minh-100">
     <div class="container">
         <div class="mb-4 text-center">
             <h1 class="font-weight-bold">Il nostro <i class="fas fa-blog"></i>log</h1>
@@ -18,6 +18,17 @@ $firstArticle = array_pop($object->articles);
             </ol>
         </nav>
 
+        <?php
+        if (count($object->articles) == 0) {
+        ?>
+        <div class="alert alert-warning" role="alert">
+            Nessun articolo presente!
+        </div>
+        <?php
+
+        }
+        else{
+        ?>
         <div class="row pt-3 pb-1">
             <div class="col-md-12 text-center">
                 <h5 class="text-uppercase text-muted font-weight-bold">In primo piano</h5>
@@ -39,7 +50,8 @@ $firstArticle = array_pop($object->articles);
 
                         ?>
                     </p>
-                    <p class="lead mb-0"><a href="<?= "/article?id=" . $firstArticle->getId() ?>" class="text-yellow font-weight-bold"><i class="fas fa-external-link-alt"></i> Leggi di
+                    <p class="lead mb-0"><a href="<?= "/article?id=" . $firstArticle->getId() ?>"
+                            class="text-yellow font-weight-bold"><i class="fas fa-external-link-alt"></i> Leggi di
                             pi&ugrave;...</a></p>
                 </div>
             </div>
@@ -51,7 +63,10 @@ $firstArticle = array_pop($object->articles);
                 </div>
             </div>
         </div>
-
+        <?php
+                    }
+                    if(count($object->articles) > 1){
+                        ?>
         <div class="row pt-3 pb-1">
             <div class="col-md-12 text-center">
                 <h5 class="text-uppercase text-muted font-weight-bold">Altri articoli</h5>
@@ -68,31 +83,34 @@ $firstArticle = array_pop($object->articles);
                 $date = new DateTime($article->getDate());
             ?>
 
-                <div class="col-md-6">
-                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <h3><?= $article->getTitle() ?></h3>
-                            <p class="card-text mb-2"> <?php
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3><?= $article->getTitle() ?></h3>
+                        <p class="card-text mb-2"> <?php
                                                         if (strlen($article->getText()) > 100) {
                                                             echo substr($article->getText(), 0, 100) . "...";
                                                         } else {
                                                             echo $article->getText();
                                                         }
                                                         ?>
-                            </p>
-                            <a href="<?= "/article?id=" . $article->getId() ?>" class="stretched-link text-yellow"><i class="fas fa-external-link-alt"></i> Leggi di
-                                pi&ugrave;...</a>
-                            <div class="mb-1 text-right text-muted font-italic" style="font-size:10px;">
-                                Aggiornato il <?= $date->format('d/m/Y'); ?> alle ore <?= $date->format('H:i:s'); ?>
-                            </div>
+                        </p>
+                        <a href="<?= "/article?id=" . $article->getId() ?>" class="stretched-link text-yellow"><i
+                                class="fas fa-external-link-alt"></i> Leggi di
+                            pi&ugrave;...</a>
+                        <div class="mb-1 text-right text-muted font-italic" style="font-size:10px;">
+                            Aggiornato il <?= $date->format('d/m/Y'); ?> alle ore <?= $date->format('H:i:s'); ?>
                         </div>
                     </div>
                 </div>
+            </div>
             <?php
                 if (++$count % 2 == 0) {
                     echo "</div><div class='row mb-2'>";
                 }
             }
+        }
             ?>
         </div>
     </div>
