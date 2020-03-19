@@ -44,7 +44,7 @@ $utilityObject->fixedBar = true;
                         <div class="form-group">
                             <label for="inputEmail1" class="text-white">Email</label>
                             <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Inserisci Email" name="email">
-                            <label class="text-yellow" id="error_email" style="display:none;">L' indirizzo email deve essere valido</label>
+                            <label class="text-yellow" id="error_email" style="display:none;">L'indirizzo email deve essere valido</label>
                         </div>
                         <div class="form-group">
                             <label for="inputName" class="text-white">Nome Università</label>

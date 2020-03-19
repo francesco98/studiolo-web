@@ -20,9 +20,9 @@ class ContactsController
         $response = [];
 
         if (
-            ContactsController::is_valid_field($params->uni) &&
-            ContactsController::is_valid_field($params->email) &&
-            ContactsController::is_valid_field($params->message) &&
+            ContactsController::is_valid_field($params->uni, 50) &&
+            ContactsController::is_valid_field($params->email, 100) &&
+            ContactsController::is_valid_field($params->message, 500) &&
             filter_var($params->email, FILTER_VALIDATE_EMAIL)
         ) {
 
@@ -47,8 +47,8 @@ class ContactsController
     }
 
 
-    private static function is_valid_field($field)
+    private static function is_valid_field($field, $max)
     {
-        return !is_null($field) && strlen(trim($field)) >= 4 && strlen(trim($field)) < 50;
+        return !is_null($field) && strlen(trim($field)) >= 3 && strlen(trim($field)) < 50;
     }
 }

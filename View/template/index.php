@@ -14,7 +14,7 @@
         </div>
         <div class="row h-25">
             <div class="col-lg-12 text-center">
-            <a class="btn btn-home btn-outline btn-xl js-scroll-trigger" href="/contacts">Inizia ora!</a>
+                <a class="btn btn-home btn-outline btn-xl js-scroll-trigger" href="/contacts">Inizia ora!</a>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
     </div>
 </section>
 
-<section class="features" id="features">
+<section class="features bg-secondary-1" id="features">
     <div class="container">
         <div class="section-heading text-center">
             <h2>Perchè scegliere Studiolo?</h2>
@@ -43,50 +43,33 @@
             <hr>
         </div>
         <div class="row">
-            <div class="col-lg-4 my-auto">
+            <div class="col-lg-12 my-auto mx-auto text-center">
+                <iframe style="width:100%; height:500px;" src="https://www.youtube.com/embed/K7fQDO3lUhk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features bg-secondary-2">
+    <div class="container">
+        <hr>
+        <div class="d-flex justify-content-around">
+            <div class="p-2">
+                <h3 class="text-center justify-content-start p-3">La nostra applicazione</h3>
                 <div class="device-container">
                     <img src="resources/img/studiolo-screen-1.jpg" class="img-fluid" alt="">
                 </div>
             </div>
-            <div class="col-lg-8 my-auto">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="feature-item">
-                                <i class="icon-screen-smartphone text-primary"></i>
-                                <h3>Caratteristica 1</h3>
-                                <p class="text-muted">Descrizione 1</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="feature-item">
-                                <i class="icon-camera text-primary"></i>
-                                <h3>Caratteristica 2</h3>
-                                <p class="text-muted">Descrizione 2</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="feature-item">
-                                <i class="icon-present text-primary"></i>
-                                <h3>Caratteristica 3</h3>
-                                <p class="text-muted">Descrizione 3</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="feature-item">
-                                <i class="icon-lock-open text-primary"></i>
-                                <h3>Caratteristica 4</h3>
-                                <p class="text-muted">Descrizione 4</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="p-2">
+                <h3 class="text-center justify-content-start p-3">Il nostro dispositivo</h3>
+                <div class="device-container">
+                    <img src="resources/img/studiolo-screen-2.png" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <section class="cta">
     <div class="cta-content">
