@@ -75,7 +75,7 @@
     <div class="cta-content">
         <div class="container">
             <h2>Che stai aspettando?</h2>
-            <a href="/contacts" class="btn btn-home btn-outline btn-xl js-scroll-trigger">Unisci ora!</a>
+            <a href="/contacts" class="btn btn-home btn-outline btn-xl js-scroll-trigger">Unisciti ora!</a>
         </div>
     </div>
     <div class="overlay"></div>
