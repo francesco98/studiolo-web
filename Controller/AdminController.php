@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Model\DB\Article;
+use Model\DB\Contact;
 use View\Render;
 
 class AdminController
@@ -114,7 +115,8 @@ class AdminController
     private function home()
     {
         $articles = Article::findAll();
-        return Render::listArticles("Lista Articoli", ["articles" => $articles]);
+        $contacts = Contact::findAll();
+        return Render::listArticles("Lista Articoli", ["articles" => $articles, "contacts" => $contacts]);
     }
 
     private function login()
