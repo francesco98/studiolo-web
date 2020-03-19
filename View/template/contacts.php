@@ -19,7 +19,7 @@ $utilityObject->fixedBar = true;
 
         <div class="row justify-content-md-center">
             <?php
-            if (isset($object->message)) {
+            if (isset($object->result) && isset($object->message) && $object->result) {
             ?>
                 <div class="col-lg-12 my-auto text-center">
                     <i class="fas text-muted fa-check fa-10x"></i><br />
@@ -31,6 +31,15 @@ $utilityObject->fixedBar = true;
             } else {
             ?>
                 <div class="col-lg-6 mt-5">
+                    <?php
+                    if (isset($object->result) && isset($object->message) && !$object->result) {
+                    ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= $object->message ?>
+                        </div>
+                    <?php
+                    }
+                    ?>
                     <form class="masthead shadow-lg form-contacts" action="/processform" method="post">
                         <div class="form-group">
                             <label for="inputEmail1" class="text-white">Email</label>

@@ -1,37 +1,22 @@
-(function($) {
-  "use strict"; // Start of use strict
-
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-      if (target.length) {
-        $("html, body").animate(
-          {
-            scrollTop: target.offset().top - 48
-          },
-          1000,
-          "easeInOutExpo"
-        );
-        return false;
+$(function($) {
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    if (!$("#mainNav").hasClass("no-scroll")) {
+      if ($("#mainNav").offset().top > 100) {
+        $("#mainNav").addClass("navbar-shrink");
+      } else {
+        $("#mainNav").removeClass("navbar-shrink");
       }
     }
-  });
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
 
   // Closes responsive menu when a scroll trigger link is clicked
   $(".js-scroll-trigger").click(function() {
     $(".navbar-collapse").collapse("hide");
-  });
-
-  // Activate scrollspy to add active class to navbar items on scroll
-  $("body").scrollspy({
-    target: "#mainNav",
-    offset: 54
   });
 
   $("#editOp").click(function() {
@@ -68,63 +53,47 @@
   var checkName = false;
   var checkMessage = false;
 
-  function check (){
-    if(checkEmail && checkName && checkMessage){
-      $("#send").prop('disabled', false);
+  function check() {
+    if (checkEmail && checkName && checkMessage) {
+      $("#send").prop("disabled", false);
+    } else {
+      $("#send").prop("disabled", true);
     }
   }
 
-  $("#inputEmail1").keyup(function(){
+  $("#inputEmail1").keyup(function() {
     var input = $("#inputEmail1").val().length;
-    if(input >= 3 && input < 50){
+    if (input >= 3 && input < 50) {
       $("#error_email").hide();
       checkEmail = true;
-    }
-    else{
+    } else {
       $("#error_email").show();
       checkEmail = false;
     }
     check();
   });
-  
-  $("#inputName").keyup(function(){
+
+  $("#inputName").keyup(function() {
     var input = $("#inputName").val().length;
-    if(input >= 3 && input < 50){
+    if (input >= 3 && input < 50) {
       $("#error_name").hide();
       checkName = true;
-    }
-    else{
+    } else {
       $("#error_name").show();
       checkName = false;
     }
     check();
   });
 
-  $("#inputMessage").keyup(function(){
+  $("#inputMessage").keyup(function() {
     var text = $("#inputMessage").val().length;
-    if(text >= 3 && text < 150){
+    if (text >= 3 && text < 150) {
       $("#error_message").hide();
       checkMessage = true;
-    }
-    else{
+    } else {
       $("#error_message").show();
       checkMessage = false;
     }
     check();
   });
-
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if (!$("#mainNav").hasClass("no-scroll")) {
-      if ($("#mainNav").offset().top > 100) {
-        $("#mainNav").addClass("navbar-shrink");
-      } else {
-        $("#mainNav").removeClass("navbar-shrink");
-      }
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-})(jQuery); // End of use strict
+});
