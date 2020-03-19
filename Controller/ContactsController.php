@@ -49,6 +49,6 @@ class ContactsController
 
     private static function is_valid_field($field, $max)
     {
-        return !is_null($field) && strlen(trim($field)) >= 3 && strlen(trim($field)) < 50;
+        return !is_null($field) && strlen(trim($field)) >= 3 && strlen(trim($field)) < $max;
     }
 }
