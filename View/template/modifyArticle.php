@@ -8,6 +8,7 @@ $utilityObject->fixedBar = true;
     <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Studiolo</a></li>
+                <li class="breadcrumb-item" aria-current="page">Amministrazione</li>
                 <li class="breadcrumb-item active" aria-current="page"><?= !is_null($object->article->getTitle()) ? $object->article->getTitle() : 'Nuovo articolo' ?></li>
             </ol>
         </nav>
