@@ -3,6 +3,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="<?= ($utilityObject->getStyle)('bootstrap.min') ?>">
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <script src="https://kit.fontawesome.com/9fcb7fa616.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
