@@ -12,10 +12,12 @@ class ConnectionManager
 {
 
     //Parametri di connessione al database
-    private static $serverName = "localhost";
+    private static $serverName = "studiolo-db"; //Change in localhost
     private static $dbName = "studioloweb";
     private static $user = "studioloweb";
     private static $pass = "Q1LovzEYdUUpmRgV";
+
+    []
 
     private $myConn;
 
