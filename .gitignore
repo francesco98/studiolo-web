@@ -1,3 +1,6 @@
 ### Composer ###
 composer.phar
 /vendor/
+/docker-conf/
+docker-compose.yml
+Dockerfile

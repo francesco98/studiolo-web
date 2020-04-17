@@ -23,7 +23,7 @@ class AdminController
     {
         $params = $request->getPostParams();
 
-        if (!is_null($params->user) && !is_null($params->password) && $params->user == "admin" && $params->password == "admin") {
+        if (!is_null($params->user) && !is_null($params->password) && $params->user == "admin" && $params->password == "studioloMMTP") {
             $this->startSession();
             $_SESSION['login'] = 1;
 
