@@ -51,6 +51,10 @@ section h2 {
   font-size: 50px;
 }
 
+iframe { 
+  border: none; 
+}
+
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
   background-color: white;

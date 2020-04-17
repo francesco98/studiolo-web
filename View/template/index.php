@@ -44,7 +44,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 my-auto mx-auto text-center">
-                <iframe style="width:100%; height:500px;" src="https://www.youtube.com/embed/K7fQDO3lUhk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe style="width:100%; height:500px; " src="https://www.youtube.com/embed/K7fQDO3lUhk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -82,6 +82,7 @@
 </section>
 
 <section class="contact bg-primary" id="contact">
+<h2>Social</h2>
     <div class="container">
         <ul class="list-inline list-social">
             <li class="list-inline-item social-twitter">
