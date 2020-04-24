@@ -1,8 +1,14 @@
+<!-- Gestione variabili php della view -->
 <?php
 $utilityObject->fixedBar = true;
 ?>
+
+<!-- Section della lista articoli -->
 <section class="masthead minh-100">
+    <!-- Container -->
     <div class="container">
+
+        <!-- Breadcrumb -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-white">
                 <li class="breadcrumb-item"><a href="/">Studiolo</a></li>
@@ -10,6 +16,7 @@ $utilityObject->fixedBar = true;
             </ol>
         </nav>
 
+        <!-- Tabs -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="articles-tab" data-toggle="tab" href="#articles" role="tab" aria-controls="articles" aria-selected="true">Lista Articoli</a>
@@ -26,10 +33,10 @@ $utilityObject->fixedBar = true;
                     <div class="row mb-5 d-block p-4">
                         <a href="<?= "/modifyArticle?op=insert" ?>" class="btn btn-warning float-right">Nuovo articolo</a>
                     </div>
+                    <!-- Gestione visualizzazione lista articoli -->
                     <?php
                     if (count($object->articles) == 0) {
                     ?>
-
                         <div class="alert alert-warning" role="alert">
                             Nessun articolo presente!
                         </div>

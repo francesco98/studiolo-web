@@ -1,3 +1,4 @@
+<!-- top pagina -->
 <header class="masthead">
     <div class="container h-100">
         <div class="row h-75">
@@ -20,6 +21,7 @@
     </div>
 </header>
 
+<!-- Section donwload -->
 <section class="download bg-primary text-center" id="download">
     <div class="container">
         <div class="row">
@@ -35,6 +37,7 @@
     </div>
 </section>
 
+<!-- Section features 1 -->
 <section class="features bg-secondary-1" id="features">
     <div class="container">
         <div class="section-heading text-center">
@@ -50,6 +53,7 @@
     </div>
 </section>
 
+<!-- Section features 2 -->
 <section class="features bg-secondary-2">
     <div class="container">
         <hr>
@@ -70,7 +74,7 @@
     </div>
 </section>
 
-
+<!-- Section cta -->
 <section class="cta">
     <div class="cta-content">
         <div class="container">
@@ -81,6 +85,7 @@
     <div class="overlay"></div>
 </section>
 
+<!-- Section contatti -->
 <section class="contact bg-primary" id="contact">
 <h2>Social</h2>
     <div class="container">

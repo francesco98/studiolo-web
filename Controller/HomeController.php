@@ -7,8 +7,9 @@ use View\Render;
 
 class HomeController {
 
-    //Pagina Home
+    //index
     public function index() {
+        //passo aalla view il titolo e relative variabili
         return Render::index("Home", []);
     }
 }

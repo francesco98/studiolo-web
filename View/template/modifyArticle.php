@@ -1,10 +1,14 @@
+<!-- Gestione variabili php della view -->
 <?php
 $utilityObject->fixedBar = true;
 ?>
 
+<!-- Section modifica articolo -->
 <section class="section-blog minh-100">
+    <!-- Container -->
     <div class="container ">
 
+    <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Studiolo</a></li>
@@ -15,6 +19,7 @@ $utilityObject->fixedBar = true;
 
         <div class="row justify-content-md-start">
             <div class="col-lg-8 ">
+                <!-- Form e relativi elmenti -->
                 <form id="articleForm" method="POST" action="/processedit">
                     <div class="form-group">
                         <h4>
@@ -38,6 +43,7 @@ $utilityObject->fixedBar = true;
                         <h5 class="card-title">Azioni</h5>
                         <p class="card-text">Attenzione: lasciando questa pagina senza salvare con il pulsante in basso,
                             le modifiche andranno perse.</p>
+                        <!-- Gestione azioni  -->
                         <a id="editOp" href="#" class="btn btn-primary mt-2"><?= strtoupper($object->op) == "UPDATE" ? "Modifica" : "Inserisci" ?> </a>
                         <?php if (strtoupper($object->op) == "UPDATE") { ?>
                             <a id="deleteOp" href="#" class="btn btn-danger mt-2">Elimina</a>

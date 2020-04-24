@@ -1,6 +1,8 @@
+<!-- Gestione variabili php della view -->
 <?php
 $utilityObject->fixedBar = true;
 ?>
+<!-- Section dei contatti -->
 <section class="minh-100">
     <div class="container">
         <div class="mb-4 text-center">
@@ -10,6 +12,7 @@ $utilityObject->fixedBar = true;
             </h5>
         </div>
 
+        <!-- Breadcrumb -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Studiolo</a></li>
@@ -18,6 +21,7 @@ $utilityObject->fixedBar = true;
         </nav>
 
         <div class="row justify-content-md-center">
+            <!-- Gestione messaggi -->
             <?php
             if (isset($object->result) && isset($object->message) && $object->result) {
             ?>
@@ -31,6 +35,7 @@ $utilityObject->fixedBar = true;
             } else {
             ?>
                 <div class="col-lg-6 mt-5">
+                    <!-- Gestione errori -->
                     <?php
                     if (isset($object->result) && isset($object->message) && !$object->result) {
                     ?>
@@ -40,6 +45,7 @@ $utilityObject->fixedBar = true;
                     <?php
                     }
                     ?>
+                    <!--From e relativi elementi -->
                     <form class="masthead shadow-lg form-contacts" action="/processform" method="post">
                         <div class="form-group">
                             <label for="inputEmail1" class="text-white">Email</label>

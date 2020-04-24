@@ -1,8 +1,13 @@
+<!-- Gestione variabili php della view -->
 <?php
 $utilityObject->fixedBar = true;
 ?>
+
+<!-- Section del blog -->
 <section class="minh-100">
+    <!-- Container -->
     <div class="container">
+    <!-- Header -->
         <div class="mb-4 text-center">
             <h1 class="font-weight-bold">Il nostro <i class="fas fa-blog"></i>log</h1>
             <h5 class="font-italic font-weight-light">
@@ -10,6 +15,7 @@ $utilityObject->fixedBar = true;
             </h5>
         </div>
 
+        <!-- Breadcrumb -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Studiolo</a></li>
@@ -17,6 +23,7 @@ $utilityObject->fixedBar = true;
             </ol>
         </nav>
 
+        <!-- Gestione della visualizzaizone articoli -->
         <?php
         if (count($object->articles) == 0) {
         ?>
@@ -36,7 +43,9 @@ $utilityObject->fixedBar = true;
             <div class="jumbotron px-5 pt-5 pb-4 text-white rounded bg-dark gradient-post">
                 <div class="row">
                     <div class="col-md-6 px-0">
+                        <!-- Titolo -->
                         <h1 class="display-4"><?= $firstArticle->getTitle() ?></h1>
+                        <!-- SReassunto -->
                         <p class="lead my-3">
                             <?php
                             $date = new DateTime($firstArticle->getDate());
@@ -53,6 +62,7 @@ $utilityObject->fixedBar = true;
                                 pi&ugrave;...</a></p>
                     </div>
                 </div>
+                <!-- Info -->
                 <div class="row">
                     <div class="col-md-12 text-right">
                         <div class="mt-3 text-white font-italic" style="font-size:10px;">
@@ -72,19 +82,16 @@ $utilityObject->fixedBar = true;
             </div>
 
             <div class="row mb-2">
-
                 <?php
-
                 $count = 0;
-
                 foreach ($object->articles as $article) {
                     $date = new DateTime($article->getDate());
                 ?>
-
                     <div class="col-md-6">
                         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col p-4 d-flex flex-column position-static">
                                 <h3><?= $article->getTitle() ?></h3>
+                                <!-- SReassunto -->
                                 <p class="card-text mb-2"> <?php
                                                             if (strlen($article->getText()) > 100) {
                                                                 echo substr($article->getText(), 0, 100) . "...";
@@ -95,6 +102,7 @@ $utilityObject->fixedBar = true;
                                 </p>
                                 <a href="<?= "/article?id=" . $article->getId() ?>" class="stretched-link text-yellow"><i class="fas fa-external-link-alt"></i> Leggi di
                                     pi&ugrave;...</a>
+                                <!-- info -->
                                 <div class="mb-1 text-right text-muted font-italic" style="font-size:10px;">
                                     Aggiornato il <?= $date->format('d/m/Y'); ?> alle ore <?= $date->format('H:i:s'); ?>
                                 </div>
